@@ -1,4 +1,5 @@
 /* eslint-disable */
+import * as maptilersdk from '@maptiler/sdk';
 
 export const displayMap = (locations) => {
   maptilersdk.config.apiKey = 'z4nlLDGQ9NSiE6IjKT8D';
