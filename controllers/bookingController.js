@@ -48,6 +48,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
+//uncomment when work with localhost
 // exports.createBookingCheckout = catchAsync(async (req, res, next) => {
 //   const { tour, user, price } = req.query;
 
@@ -57,6 +58,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 //   res.redirect(req.originalUrl.split('?')[0]);
 // });
 
+//comment from 62 when work with localhost and check bookingController
 const createBookingCheckout = async (session) => {
   const tour = session.client_reference_id;
   const user = (await User.findOne({ email: session.customer_email })).id;
@@ -91,7 +93,7 @@ exports.webhookCheckout = async (req, res, next) => {
     },
   });
 };
-
+//comment till 96 when work with localhost
 exports.createBooking = factory.createOne(Booking);
 exports.getBooking = factory.getOne(Booking);
 exports.getAllBookings = factory.getAll(Booking);

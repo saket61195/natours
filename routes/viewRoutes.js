@@ -2,6 +2,7 @@ const express = require('express');
 const viewsController = require('../controllers/viewsController');
 const authController = require('../controllers/authController');
 // const bookingController = require('../controllers/bookingController');
+//uncomment bookingController when work with localhost and check viewRoutes
 
 const router = express.Router();
 
